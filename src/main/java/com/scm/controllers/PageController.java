@@ -71,10 +71,11 @@ public class PageController {
 
     // processing register
     @PostMapping("/do-register")
-    public String processRegister(@Valid @ModelAttribute UserForm userForm, BindingResult bindingResult, HttpSession session) {
+    public String processRegister(@Valid @ModelAttribute UserForm userForm, BindingResult bindingResult,
+            HttpSession session) {
         System.out.println(userForm);
 
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return "register";
         }
 
